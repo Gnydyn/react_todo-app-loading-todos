@@ -25,45 +25,45 @@ export const Footer: React.FC<Props> = ({
 
       {/* Active link should have the 'selected' class */}
       <nav className="filter" data-cy="Filter">
-      <a
-        href="#/"
-        className={classNames('filter__link', {
-          selected: activeFilter === 'all',
-        })}
-        data-cy="FilterLinkAll"
-        onClick={() => {
-          onFilterChange('all');
-        }}
-      >
-        All
-      </a>
+        <a
+          href="#/"
+          className={classNames('filter__link', {
+            selected: activeFilter === 'all',
+          })}
+          data-cy="FilterLinkAll"
+          onClick={() => {
+            onFilterChange('all');
+          }}
+        >
+          All
+        </a>
 
-      <a
-        href="#/active"
-        className={classNames('filter__link', {
-          selected: activeFilter === 'active',
-        })}
-        data-cy="FilterLinkActive"
-        onClick={() => {
-          onFilterChange('active');
-        }}
-      >
-        Active
-      </a>
+        <a
+          href="#/active"
+          className={classNames('filter__link', {
+            selected: activeFilter === 'active',
+          })}
+          data-cy="FilterLinkActive"
+          onClick={() => {
+            onFilterChange('active');
+          }}
+        >
+          Active
+        </a>
 
-      <a
-        href="#/completed"
-        className={classNames('filter__link', {
-          selected: activeFilter === 'completed',
-        })}
-        data-cy="FilterLinkCompleted"
-        onClick={() => {
-          onFilterChange('completed');
-        }}
-      >
-        Completed
-      </a>
-    </nav>
+        <a
+          href="#/completed"
+          className={classNames('filter__link', {
+            selected: activeFilter === 'completed',
+          })}
+          data-cy="FilterLinkCompleted"
+          onClick={() => {
+            onFilterChange('completed');
+          }}
+        >
+          Completed
+        </a>
+      </nav>
 
       {/* this button should be disabled if there are no completed todos */}
       <button
