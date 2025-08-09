@@ -78,14 +78,16 @@ export const App: React.FC = () => {
         ) : (
           <>
             <TodoList todos={filteredTodos} toggleTodo={toggleTodo} />
-
-            <Footer
-              todos={todos}
-              activeFilter={activeFilter}
-              onFilterChange={setActiveFilter}
-              incompleteCount={incompleteCount}
-            />
           </>
+        )}
+
+        {todos.length > 0 && (
+          <Footer
+            todos={todos}
+            activeFilter={activeFilter}
+            onFilterChange={setActiveFilter}
+            incompleteCount={incompleteCount}
+          />
         )}
 
         <ErrorNotification
